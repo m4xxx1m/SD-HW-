@@ -46,6 +46,10 @@ if (ENABLE_TESTING)
     add_executable(BELLMAN-FORD tests/testBellmanFord.cpp)
     target_link_libraries(BELLMAN-FORD PRIVATE GraphAlgorithmsLibrary)
     add_test(NAME BELLMAN-FORD COMMAND BELLMAN-FORD)
+
+    add_executable(FLOYD-WARSHALL tests/testFloydWarshall.cpp)
+    target_link_libraries(FLOYD-WARSHALL PRIVATE GraphAlgorithmsLibrary)
+    add_test(NAME FLOYD-WARSHALL COMMAND FLOYD-WARSHALL)
 endif()
 
 add_executable(environment environment/environment.cpp)
